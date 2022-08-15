@@ -71,14 +71,17 @@ function App() {
 
 const Swappers = styled.div`
   width: 100%;
-  height: 100vh;
+  height: 100%;
   margin: auto;
-  position: relative;
+  /* position: relative; */
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
   line-height: 100%;
+  @media (max-width: 768px) {
+    height: 100%;
+  }
 `;
 const Container = styled.div`
   width: 100%;
@@ -94,14 +97,15 @@ const Sum = styled.div`
 `;
 
 const SearchInput = styled.div`
-  position: absolute;
-  /* position: fixed; */
-  /* top: 100px; */
   z-index: 10;
-  left: 50%;
-  transform: translateX(-50%);
+  position: relative;
+  width: 350px;
+  height: 45px;
+  margin: 50px auto;
+
   @media (max-width: 768px) {
-    top: 10px;
+    margin: 30px auto;
+    width: 250px;
   }
 `;
 
@@ -113,8 +117,8 @@ const Input = styled.input`
   padding: 0 10px;
   font-size: 1.1rem;
   @media (max-width: 768px) {
-    width: 250px;
     font-size: 1rem;
+    width: 250px;
   }
 `;
 
